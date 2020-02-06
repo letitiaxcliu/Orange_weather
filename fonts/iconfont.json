@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6805575",
+      "name": "Raining",
+      "font_class": "Raining",
+      "unicode": "e9b3",
+      "unicode_decimal": 59827
+    },
+    {
+      "icon_id": "6805580",
+      "name": "Storm-night",
+      "font_class": "Storm-night",
+      "unicode": "e9b5",
+      "unicode_decimal": 59829
+    },
+    {
+      "icon_id": "6805581",
+      "name": "Storm-day",
+      "font_class": "Storm-day",
+      "unicode": "e9b6",
+      "unicode_decimal": 59830
+    },
+    {
+      "icon_id": "6805582",
+      "name": "Sun",
+      "font_class": "Sun",
+      "unicode": "e9b7",
+      "unicode_decimal": 59831
+    },
+    {
+      "icon_id": "6805593",
+      "name": "Cloudy-Day",
+      "font_class": "Cloudy-Day",
+      "unicode": "e9ba",
+      "unicode_decimal": 59834
+    }
+  ]
+}

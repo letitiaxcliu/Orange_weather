@@ -1,0 +1,230 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    margin: 0 auto;
+    font-size: 16px;
+    background-color: #fff;
+} 
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+}
+.auto-img{
+    width: 100%;
+    display: block;
+}  
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.clear{
+    zoom: 1;
+}
+
+html,body,.weather{
+    height: 100%;
+}
+body{
+	background: url(../images/night.jpg)no-repeat center center;
+    background-size: cover;
+}
+.weather {
+    color: #fff;
+    overflow-y: auto;
+}
+.systemnav{
+    height: 24px;
+    background: #000;
+    opacity: .7;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.wea-nav{
+    height: .44rem;
+    padding-left: .1rem;
+    padding-right: .1rem;
+    position: sticky;
+    top: 24px;
+    z-index: 2;
+}
+.city-city{
+    width: .8rem;
+    color: #fff;
+    font-size: .16rem;
+    line-height: .44rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.city-icon{
+    width: .2rem;
+    height: .2rem;
+    background: url('../images/location.png')no-repeat center center;
+    background-size: .2rem .2rem;
+    margin-top:.12rem;
+}
+.search{
+    width: calc(100% - 1.6rem);
+    height: .28rem;
+    margin: .08rem 0 0 0.2rem;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .5) 100%);
+    border-radius: .14rem;
+    padding:0 .14rem;
+}
+.search .search-inp{
+    display: block;
+    width: calc(100% - .2rem);
+    height: .28rem;
+    color: #fff;
+    font-size: .14rem;
+}
+.search .search-icon{
+    width: .2rem;
+    height: .2rem;
+    background: url("../images/search.png") no-repeat center center;
+    background-size: .2rem .2rem;
+    margin-top: .04rem;
+    cursor: pointer;
+}
+
+.wea-content{
+    z-index: 1;
+    height: calc(100% - 24px - .44rem); /*减号要隔开 */
+    position: relative;
+    overflow-y: auto;
+}
+.current-wea{
+    margin:.2rem;
+    background-color: rgba(255, 255, 255, .1);
+    padding: .1rem;
+    border-radius: .15rem;
+    box-shadow: 0px 0px 16px 2px rgba(255, 255, 255, .55) inset;
+}
+.current-wea .wea-date{
+    font-size: .16rem;
+    padding-top: .2rem;
+}
+.wea-date>span{
+    padding-right: .16rem;
+}
+.temperature{
+    margin: .3rem 0;
+    text-align: center;
+}
+.tem{
+    font-size: .6rem;
+    font-weight: normal;
+}
+.tem1,.tem2{
+    font-size: .14rem;
+}
+.temperature>p{
+    margin: .06rem 0;
+    font-size: .24rem;
+}
+.temperature .air-quality{
+    text-align: left;
+    padding: .1rem .08rem;
+    font-size: .14rem;
+}
+.temperature .wea-wind{
+    text-align: left;
+    font-size: .14rem;
+}
+.wea-wind>span{
+    margin: 0 .04rem;
+}
+
+/* 24小时 */
+.hours-wea{
+    padding: 0 .1rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .2);
+}
+.wea-title{
+    font-size: .22rem;
+    font-weight: normal;
+    height: .32rem;
+    line-height: .32rem;
+    padding: .1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+.hours-wea .h-weas{
+    overflow-x: auto;
+    text-align: center;
+}
+.hours-wea .h-weas ul{
+    width: 28.8rem;
+}
+.h-weas ul li{
+    float: left;
+    width: 1.2rem;
+    padding: .15rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .16rem;
+}
+.hwea-icon{
+    width: .3rem;
+    height: .3rem;
+    margin-left: .45rem;
+    line-height: .3rem;
+    font-size: .22rem;
+}
+
+/* 未来几天天气 */
+.future-wea {
+    margin: .2rem 0;
+    background-color: rgba(255, 255, 255, .2);
+    padding: 0 .1rem;
+}
+.future-wea .f-weas{
+    margin-top: .1rem;
+}
+.f-weas>ul li{
+    font-size: 0.16rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    line-height: .18rem;
+}
+.f-weas>ul>li>span{
+    margin: .1rem .15rem;
+}
+.fwea-icon{
+    width: .3rem;
+    height: .3rem;
+    font-size: .28rem;
+    text-align: center;
+}
+.more-wea{
+    text-align: center;
+    font-weight: normal;
+    font-size: .18rem;
+    height: .32rem;
+    line-height: .32rem;
+    margin: .1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OrangeWeather</title>
+    <link rel="stylesheet" href="./css/iconfont.css">
+    <link rel="stylesheet" href="./css/weather.css">
+</head>
+
+<body>
+    <div class="weather">
+        
+        <div class="systemnav"></div>
+
+        <!-- 内容导航栏 start -->
+        <div class="wea-nav">
+            <div class="fl clearfix">
+                <span class="fl city-city"><!-- 北海 --></span>
+                <span class="fl city-icon"></span>
+            </div>
+            <div class="fr clearfix search">
+                <input class="fl search-inp" type="text" placeholder="请输入城市..." autocomplete='off'/>
+                <span class="fl search-icon"></span>
+            </div>
+        </div>
+        <!-- 内容导航栏 end -->
+
+        <!-- 主要内容 start -->
+        <div class="wea-content">
+            <!-- 当前天气详情 -->
+            <div class="current-wea">
+                <div class="wea-date">
+                    <span class="date">
+                        <!-- 2019/10/21 -->
+                    </span>
+                    <span class="week">
+                        <!-- 星期一 -->
+                    </span>
+                </div>
+                <div class="temperature">
+                    <div>
+                        <span class="tem">
+                            <!-- 22℃ -->
+                        </span>
+                        <span class="tem1"></span>
+                        <span>~</span>
+                        <span class="tem2"></span>
+                    </div>
+                    <p class="tem-status wea">
+                        <!-- 晴 -->
+                    </p>
+                    <div class="air-quality">
+                        <span>空气质量：</span>
+                        <span class="air_level">
+                            <!-- 空气质量良好 -->
+                        </span>
+                    </div>
+                    <div class="wea-wind clearfix">
+                        <span class="win">
+                            <!-- 东风 -->
+                        </span>
+                        <span class="win_speed">
+                            <!-- 1级 -->
+                        </span>
+                        <span class="win_meter">
+                            <!-- >=20km/h -->
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 各时段天气详情 -->
+            <div class="hours-wea">
+                <h2 class="wea-title">
+                    24小时天气
+                </h2>
+                <div class="h-weas">
+                    <ul class="clearfix" id="hoursWeather">
+                        <!-- <li>
+                            <div>
+                                00:00
+                            </div>
+                            <div class="icon iconfont hwea-icon">
+                                &#xe9b7;
+                            </div>
+                            <div>
+                                20℃
+                            </div>
+                        </li> -->
+                        <!-- 附加24个 -->
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 未来6天天气 -->
+            <div class="future-wea">
+                <h2 class="wea-title">未来6天天气</h2>
+                <div class="f-weas">
+                    <ul class="clearfix" id="futureWeather">
+                        <!-- <li>
+                            <span class="date">
+                                10月21日明天
+                            </span>
+                            <span class="icon iconfont fwea-icon wea">
+                                &#xe9b7;
+                            </span>
+                            <span>
+                                29℃/20℃
+                            </span>
+                        </li> -->
+                        <!-- <li>
+                            <span class="date">10月22日星期二</span>
+                            <span class="icon iconfont fwea-icon">&#xe9b5;</span>
+                            <span>29℃/20℃</span>
+                        </li>
+
+                        <li>
+                            <span class="date">10月23日星期三</span>
+                            <span class="icon iconfont fwea-icon">&#xe9b3;</span>
+                            <span>29℃/20℃</span>
+                        </li>
+
+                        <li>
+                            <span class="date">10月24日星期四</span>
+                            <span class="icon iconfont fwea-icon">&#xe9ba;</span>
+                            <span>29℃/20℃</span>
+                        </li>
+
+                        <li>
+                            <span class="date">10月25日星期五</span>
+                            <span class="icon iconfont fwea-icon">&#xe9b7;</span>
+                            <span>29℃/20℃</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="more-wea">
+                <a>查看更多预报详情</a>
+            </div>
+
+            <div>
+                <h2 class="wea-title">要多出门走走哦！</h2>
+                <div>完善中...</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/weather.js"></script>
+    <script>
+
+        function setRem() {
+            var standardWidth = 375; //标准屏宽度
+            var innerW = innerWidth; //页面可视宽度
+            var fontSize = innerWidth / 375 * 100; //字体大小
+
+            var style = document.createElement('style');
+            style.innerHTML = 'html{font-size: ' + (innerW >= 1200 ? 100 : fontSize) + 'px;}';
+            style.setAttribute('id', 'stylerem');
+            document.getElementsByTagName('head')[0].appendChild(style);
+        }
+        setRem();
+
+        window.onresize = function () {
+            var stylerem = document.getElementById('stylerem');
+            //如果存在stylerem，则删除
+            if (stylerem) {
+                stylerem.remove();
+            }
+            setRem();
+        }
+    </script>
+</body>
+
+</html>
